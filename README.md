@@ -1,38 +1,15 @@
-# create-svelte
+# Earthquake Intensity Dashboard
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This project is my integration of the UX/UI Earthquake Intensity Dashboard posted on dribble by Fuselab Creative.
 
-## Creating a project
+## Links
 
-If you're seeing this, you've probably already done this step. Congrats!
+Link to dribble page. https://dribbble.com/shots/21856883-Earthquake-Intensity-Dashboard
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Link to Fuselab Creative. https://dribbble.com/fuselabcreative
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Disclaimer
+I am not affiliated with Fuselab Creative in any way. This repo is my attempt to increase my skills by integrating a design I find beautiful, while learning how to solve some of the complexity introduced by the design or the animation.
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Live Link
+There is no live running version of this integration.

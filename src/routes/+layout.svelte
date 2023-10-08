@@ -65,6 +65,7 @@
 				</div>
 			</div>
 		</header>
+		<Separator class="bg-[#20252C]" />
 		<!-- slot -->
 		<slot />
 	</div>

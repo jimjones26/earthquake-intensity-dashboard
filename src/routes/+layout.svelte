@@ -24,20 +24,20 @@
 		<div class="flex items-center">
 			<p class="font-bold text-[#E9DF9D] px-4">12</p>
 			<p class="text-xs leading-4">Number of<br /> Earthquakes</p>
-			<Separator orientation="vertical" class="bg-[#1D2125] ml-4" />
+			<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
 		</div>
 		<div class="flex items-center">
 			<p class="font-bold text-[#E9DF9D] px-4">4</p>
 			<p class="text-xs leading-4">Average<br /> Frequency</p>
-			<Separator orientation="vertical" class="bg-[#1D2125] ml-4" />
+			<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
 		</div>
 		<div class="flex items-center">
 			<p class="font-bold text-[#E9DF9D] px-4">6.0</p>
 			<p class="text-xs leading-4">Maximum<br /> Magnitude</p>
-			<Separator orientation="vertical" class="bg-[#1D2125] ml-4" />
+			<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
 		</div>
-		<div class="flex items-center">
-			<p class="font-bold text-[#E9DF9D] px-4">6.0</p>
+		<div class="flex items-center mr-4">
+			<p class="font-bold text-[#E9DF9D] px-4">2.0</p>
 			<p class="text-xs leading-4">Minimum<br /> Magnitude</p>
 		</div>
 	</div>

@@ -27,9 +27,9 @@
 	</div>
 
 	<!-- content -->
-	<div class="absolute top-0 right-0 bottom-0 left-0 overflow-auto">
+	<div class="absolute top-0 right-0 bottom-0 left-0 overflow-auto flex flex-col">
 		<!-- header -->
-		<header class="flex bg-[#0C1115] p-4 items-center">
+		<header class="flex bg-[#0C1115] p-5 items-center">
 			<Button variant="outline" size="icon" class="w-9 h-9"><Menu class="h-5 w-5" /></Button>
 			<div class="flex items-center">
 				<Box class="ml-7 mr-3 h-9 w-9" />
@@ -46,23 +46,23 @@
 			</div>
 			<div class="flex">
 				<div class="flex items-center">
-					<p class="font-bold text-[#E9DF9D] px-4">12</p>
-					<p class="text-xs leading-4">Number of<br /> Earthquakes</p>
+					<p class="font-bold text-lg text-[#E9DF9D] px-4">12</p>
+					<p class="text-sm font-bold leading-4">Number of<br /> Earthquakes</p>
 					<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
 				</div>
 				<div class="flex items-center">
-					<p class="font-bold text-[#E9DF9D] px-4">4</p>
-					<p class="text-xs leading-4">Average<br /> Frequency</p>
+					<p class="font-bold text-lg text-[#E9DF9D] px-4">4</p>
+					<p class="text-sm font-bold leading-4">Average<br /> Frequency</p>
 					<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
 				</div>
 				<div class="flex items-center">
-					<p class="font-bold text-[#E9DF9D] px-4">6.0</p>
-					<p class="text-xs leading-4">Maximum<br /> Magnitude</p>
+					<p class="font-bold text-lg text-[#E9DF9D] px-4">6.0</p>
+					<p class="text-sm font-bold leading-4">Maximum<br /> Magnitude</p>
 					<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
 				</div>
 				<div class="flex items-center mr-4">
-					<p class="font-bold text-[#E9DF9D] px-4">2.0</p>
-					<p class="text-xs leading-4">Minimum<br /> Magnitude</p>
+					<p class="font-bold text-lg text-[#E9DF9D] px-4">2.0</p>
+					<p class="text-sm font-bold leading-4">Minimum<br /> Magnitude</p>
 				</div>
 			</div>
 		</header>

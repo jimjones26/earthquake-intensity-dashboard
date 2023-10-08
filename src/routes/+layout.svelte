@@ -3,10 +3,11 @@
 	import { Button } from '$lib/components/ui/button';
 	import { Toggle } from '$lib/components/ui/toggle';
 	import { Separator } from '$lib/components/ui/separator';
+	import { Menu } from 'lucide-svelte';
 </script>
 
 <header class="flex bg-[#0C1115] p-4 items-center">
-	<Button variant="default" size="sm">-</Button>
+	<Button variant="outline" size="icon" class="w-9 h-9"><Menu class="h-5 w-5" /></Button>
 	<div class="flex">
 		<span>img</span>
 		<h4>test</h4>

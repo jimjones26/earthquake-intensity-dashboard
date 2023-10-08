@@ -18,12 +18,12 @@
 		<h4>test</h4>
 	</div>
 	<div class="flex flex-1 justify-center">
-		<div class="bg-[#1F232F] rounded">
+		<div class="bg-[#1F232F] text-[#62656F] rounded">
 			<Toggle size="sm"><LayoutDashboard class="w-[18px] h-[14px] mr-1" />Overview</Toggle>
 			<Toggle size="sm"><Activity class="w-[18px] h-[14px] mr-1" />Real Time Activity</Toggle>
 			<Toggle size="sm"><BarChart class="w-[18px] h-[14px] mr-1" />Prediction</Toggle>
 			<Toggle size="sm"><List class="w-[18px] h-[14px] mr-1" />History</Toggle>
-			<Toggle size="sm"><Columns class="w-[18px] h-[14px] mr-1" />Comparison</Toggle>
+			<Toggle size="sm" pressed><Columns class="w-[18px] h-[14px] mr-1" />Comparison</Toggle>
 		</div>
 	</div>
 	<div class="flex">

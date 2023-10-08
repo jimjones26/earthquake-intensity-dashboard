@@ -27,7 +27,7 @@
 	</div>
 
 	<!-- content -->
-	<div class="absolute top-0 right-0 bottom-0 left-0 overflow-auto">
+	<div class="absolute top-0 right-0 bottom-0 left-0 overflow-auto flex flex-col">
 		<!-- header -->
 		<header class="flex bg-[#0C1115] p-4 items-center">
 			<Button variant="outline" size="icon" class="w-9 h-9"><Menu class="h-5 w-5" /></Button>

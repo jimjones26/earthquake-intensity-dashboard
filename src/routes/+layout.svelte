@@ -9,6 +9,7 @@
 	import { List } from 'lucide-svelte';
 	import { Columns } from 'lucide-svelte';
 	import { LayoutDashboard } from 'lucide-svelte';
+	import { Box } from 'lucide-svelte';
 </script>
 
 <div class="relative w-full h-full overflow-auto">
@@ -30,9 +31,9 @@
 		<!-- header -->
 		<header class="flex bg-[#0C1115] p-4 items-center">
 			<Button variant="outline" size="icon" class="w-9 h-9"><Menu class="h-5 w-5" /></Button>
-			<div class="flex">
-				<span>img</span>
-				<h4>test</h4>
+			<div class="flex items-center">
+				<Box class="ml-7 mr-3 h-9 w-9" />
+				<h4 class="text-base font-bold">Tectonic plates</h4>
 			</div>
 			<div class="flex flex-1 justify-center">
 				<div class="bg-[#1F232F] text-[#62656F] rounded">

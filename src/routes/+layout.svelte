@@ -4,6 +4,11 @@
 	import { Toggle } from '$lib/components/ui/toggle';
 	import { Separator } from '$lib/components/ui/separator';
 	import { Menu } from 'lucide-svelte';
+	import { Activity } from 'lucide-svelte';
+	import { BarChart } from 'lucide-svelte';
+	import { List } from 'lucide-svelte';
+	import { Columns } from 'lucide-svelte';
+	import { LayoutDashboard } from 'lucide-svelte';
 </script>
 
 <header class="flex bg-[#0C1115] p-4 items-center">
@@ -14,11 +19,11 @@
 	</div>
 	<div class="flex flex-1 justify-center">
 		<div class="bg-[#1F232F] rounded">
-			<Toggle size="sm">Overview</Toggle>
-			<Toggle size="sm">Real Time Activity</Toggle>
-			<Toggle size="sm">Prediction</Toggle>
-			<Toggle size="sm">History</Toggle>
-			<Toggle size="sm">Comparison</Toggle>
+			<Toggle size="sm"><LayoutDashboard class="w-[18px] h-[14px] mr-1" />Overview</Toggle>
+			<Toggle size="sm"><Activity class="w-[18px] h-[14px] mr-1" />Real Time Activity</Toggle>
+			<Toggle size="sm"><BarChart class="w-[18px] h-[14px] mr-1" />Prediction</Toggle>
+			<Toggle size="sm"><List class="w-[18px] h-[14px] mr-1" />History</Toggle>
+			<Toggle size="sm"><Columns class="w-[18px] h-[14px] mr-1" />Comparison</Toggle>
 		</div>
 	</div>
 	<div class="flex">

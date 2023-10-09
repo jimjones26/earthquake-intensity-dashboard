@@ -22,7 +22,9 @@
 			<div class="flex-1 overflow-scroll mt-2 mb-5">
 				<section class="flex flex-col">
 					{#each data.earthquakes as item}
-						<div class="mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent mr-4">
+						<div
+							class="mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent mr-4 last:mb-0"
+						>
 							<div class="group flex-1 flex text-sm text-[#DADDE3]">
 								<Intensity intensity={item.intensity} />
 								<ItemRowData label="Time" value={item.time} columnWidthPercent="20" />

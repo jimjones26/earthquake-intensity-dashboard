@@ -10,7 +10,7 @@
 	export let data: PageData;
 </script>
 
-<div class="flex mt-4 ml-5 mr-5 flex-1">
+<div class="flex mt-4 ml-5 mr-5 flex-1 overflow-hidden">
 	<div class="flex-1 flex">
 		<div class="flex-1 flex flex-col mr-5">
 			<div><Input type="text" placeholder="Search here" /></div>
@@ -22,7 +22,7 @@
 			<div class="flex-1 overflow-scroll mt-2">
 				<section class="flex flex-col">
 					{#each data.earthquakes as item}
-						<div class="mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent">
+						<div class="mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent mr-4">
 							<div class="group flex-1 flex text-sm text-[#DADDE3]">
 								<Intensity intensity={item.intensity} />
 								<ItemRowData label="Time" value={item.time} columnWidthPercent="20" />

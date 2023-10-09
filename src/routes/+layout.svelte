@@ -12,9 +12,9 @@
 	import { Box } from 'lucide-svelte';
 </script>
 
-<div class="relative w-full h-full overflow-auto">
+<div class="relative w-full h-full overflow-hidden">
 	<!-- bg tile -->
-	<div class="w-screen h-screen overflow-auto">
+	<div class="w-screen h-screen overflow-hidden">
 		<svg width="100%" height="100%">
 			<defs>
 				<pattern id="polka-dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
@@ -27,7 +27,7 @@
 	</div>
 
 	<!-- content -->
-	<div class="absolute top-0 right-0 bottom-0 left-0 overflow-auto flex flex-col">
+	<div class="absolute top-0 right-0 bottom-0 left-0 overflow-hidden flex flex-col">
 		<!-- header -->
 		<header class="flex bg-[#0C1115] p-5 items-center">
 			<Button variant="outline" size="icon" class="w-9 h-9"><Menu class="h-5 w-5" /></Button>

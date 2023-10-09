@@ -19,7 +19,7 @@
 				<Separator class="flex-1 ml-2 bg-[#21272F]" decorative />
 			</div>
 			<!-- Lists of earthquakes-->
-			<div class="flex-1 overflow-scroll mt-2">
+			<div class="flex-1 overflow-scroll mt-2 mb-5">
 				<section class="flex flex-col">
 					{#each data.earthquakes as item}
 						<div class="mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent mr-4">
@@ -38,7 +38,7 @@
 					{/each}
 				</section>
 			</div>
-			<div class="my-5 mr-4 bg-slate-100">compare list</div>
+			<div class="mb-5 mr-4 bg-slate-100">compare list</div>
 		</div>
 		<Separator orientation="vertical" class="mr-5 bg-[#21272F]" decorative />
 	</div>

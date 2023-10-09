@@ -38,7 +38,7 @@
 					{/each}
 				</section>
 			</div>
-			<div>compare list</div>
+			<div class="my-5 mr-4 bg-slate-100">compare list</div>
 		</div>
 		<Separator orientation="vertical" class="mr-5 bg-[#21272F]" decorative />
 	</div>

@@ -3,8 +3,12 @@
 	import { Separator } from '$lib/components/ui/separator';
 	import { Input } from '$lib/components/ui/input';
 	import EarthquakeList from '$lib/components/ui/EarthquakeList.svelte';
+	import ChartList from '$lib/components/ui/ChartList.svelte';
 
 	export let data: PageData;
+
+	let items: any = data.earthquakes;
+	let comparedItems: any = [];
 </script>
 
 <div class="flex mt-4 ml-5 mr-5 flex-1 overflow-hidden">
@@ -16,10 +20,13 @@
 				<Separator class="flex-1 ml-2 bg-[#21272F]" decorative />
 			</div>
 			<!-- Lists of earthquakes-->
-			<EarthquakeList items={data.earthquakes} />
+			<EarthquakeList {items} />
 			<div class="mb-5 mr-4 hidden bg-slate-100">compare list</div>
 		</div>
 		<Separator orientation="vertical" class="mr-5 bg-[#21272F]" decorative />
 	</div>
-	<div class="w-[596px] bg-[#303547]/20 border border-[#31373F] mb-5">compare chart</div>
+	<div class="w-[596px] bg-[#303547]/20 border border-[#31373F] mb-5">
+		<!-- Chart List -->
+		<ChartList items={comparedItems} />
+	</div>
 </div>

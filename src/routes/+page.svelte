@@ -41,7 +41,7 @@
 		<div class="flex-1 flex flex-col mr-5">
 			<div><Input type="text" placeholder="Search here" /></div>
 			<div class="flex items-center mt-3">
-				<div class="text-sm text-[#60656D]">List of eathquakes:</div>
+				<div class="text-sm text-[#60656D]">List of earthquakes:</div>
 				<Separator class="flex-1 ml-2 bg-[#21272F]" decorative />
 			</div>
 			<!-- Lists of earthquakes-->

@@ -57,7 +57,9 @@
 								<ItemRowData label="Coordinates" value={item.coordinates} columnWidthPercent="20" />
 								<ItemRowData label="Distanced" value={item.distanced} columnWidthPercent="20" />
 								<ItemRowData label="Depth" value={item.depth} columnWidthPercent="20" />
-								<Toggle class="h-12 w-12"><ChevronDown /></Toggle>
+								<Toggle class="h-12 w-12 rounded-none hover:bg-transparent"
+									><ChevronDown class="w-4 text-[#5C5F67]" /></Toggle
+								>
 							</div>
 						</div>
 					{/each}

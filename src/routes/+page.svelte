@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { PageData } from './$types';
 	import { Separator } from '$lib/components/ui/separator';
 	import { Input } from '$lib/components/ui/input';
 	import { Toggle } from '$lib/components/ui/toggle';
@@ -6,35 +7,7 @@
 	import Intensity from '$lib/components/ui/Intensity.svelte';
 	import ItemRowData from '$lib/components/ui/ItemRowData.svelte';
 
-	let earthquakes = [
-		{
-			id: 1,
-			intensity: 7.2,
-			time: '24h 11m',
-			location: 'Syracuse, Connecticut',
-			coordinates: '-7.67733, 19.16687',
-			distanced: '14.94 mi',
-			depth: '1.94 mi'
-		},
-		{
-			id: 2,
-			intensity: 3.6,
-			time: '22h 01m',
-			location: '34th St W, Bradenton, USA',
-			coordinates: '28.96065, -123.11716',
-			distanced: '147 mi',
-			depth: '62 mi'
-		},
-		{
-			id: 3,
-			intensity: 1.6,
-			time: '11h 34m',
-			location: 'H.G. Suite 113, Wardville',
-			coordinates: '28.96065, -123.11716',
-			distanced: '12.8 mi',
-			depth: '1.22 mi'
-		}
-	];
+	export let data: PageData;
 </script>
 
 <div class="flex mt-4 ml-5 mr-5 flex-1">
@@ -48,7 +21,7 @@
 			<!-- Lists of earthquakes-->
 			<div class="flex-1 overflow-scroll mt-2">
 				<section class="flex flex-col">
-					{#each earthquakes as item}
+					{#each data.earthquakes as item}
 						<div class="mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent">
 							<div class="group flex-1 flex text-sm text-[#DADDE3]">
 								<Intensity intensity={item.intensity} />

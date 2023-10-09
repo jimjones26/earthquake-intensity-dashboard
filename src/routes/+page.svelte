@@ -38,7 +38,7 @@
 			<div class="flex-1 overflow-scroll mt-2">
 				<section class="flex flex-col">
 					{#each earthquakes as earthquake}
-						<div class="mb-2 p-0 bg-[#4B4F5C]/25 h-12">
+						<div class="mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent">
 							<div class="flex-1 flex text-sm text-[#DADDE3]">
 								<!-- TODO:  make component-->
 								<div

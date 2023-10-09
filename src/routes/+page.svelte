@@ -4,6 +4,7 @@
 	import { Toggle } from '$lib/components/ui/toggle';
 	import { ChevronDown } from 'lucide-svelte';
 	import Intensity from '$lib/components/ui/Intensity.svelte';
+	import ItemRowData from '$lib/components/ui/ItemRowData.svelte';
 
 	let earthquakes = [
 		{
@@ -51,23 +52,11 @@
 						<div class="mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent">
 							<div class="group flex-1 flex text-sm text-[#DADDE3]">
 								<Intensity intensity={item.intensity} />
-								<div class="flex flex-col basis-[20%] items-start justify-center">
-									<span class="text-[#6B6E76] text-xs">Time</span><span>{item.time}</span>
-								</div>
-								<div class="flex flex-col basis-[20%] items-start justify-center">
-									<span class="text-[#6B6E76] text-xs">Location</span><span>{item.location}</span>
-								</div>
-								<div class="flex flex-col basis-[20%] items-start justify-center">
-									<span class="text-[#6B6E76] text-xs">Coordinates</span><span
-										>{item.coordinates}</span
-									>
-								</div>
-								<div class="flex flex-col basis-[20%] items-start justify-center">
-									<span class="text-[#6B6E76] text-xs">Distanced</span><span>{item.distanced}</span>
-								</div>
-								<div class="flex flex-col basis-[20%] items-start justify-center">
-									<span class="text-[#6B6E76] text-xs">Depth</span><span>{item.depth}</span>
-								</div>
+								<ItemRowData label="Time" value={item.time} columnWidthPercent="20" />
+								<ItemRowData label="Location" value={item.location} columnWidthPercent="20" />
+								<ItemRowData label="Coordinates" value={item.coordinates} columnWidthPercent="20" />
+								<ItemRowData label="Distanced" value={item.distanced} columnWidthPercent="20" />
+								<ItemRowData label="Depth" value={item.depth} columnWidthPercent="20" />
 								<Toggle class="h-12 w-12"><ChevronDown /></Toggle>
 							</div>
 						</div>

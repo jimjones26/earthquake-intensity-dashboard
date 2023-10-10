@@ -4,8 +4,10 @@
 	import Intensity from '$lib/components/ui/Intensity.svelte';
 	import ItemRowData from '$lib/components/ui/ItemRowData.svelte';
 
-	import { dndzone, TRIGGERS, SOURCES } from 'svelte-dnd-action';
+	import { dndzone, SHADOW_ITEM_MARKER_PROPERTY_NAME } from 'svelte-dnd-action';
 	import { flip } from 'svelte/animate';
+	import { fade } from 'svelte/transition';
+	import { cubicIn } from 'svelte/easing';
 
 	interface ListItem {
 		id: number;
@@ -18,19 +20,19 @@
 		order: number;
 	}
 
-	export let items: ListItem[] = [];
+	export let items: any[] = [];
 	export let type: string;
 	const flipDurationMs = 200;
 
 	const handleConsider = (e: CustomEvent<DndEvent<ListItem>>) => {
 		console.log('consider');
-		e.detail.items.sort((itemA: ListItem, itemB: ListItem) => itemA.order - itemB.order);
+		e.detail.items.sort((itemA: any, itemB: any) => itemA.order - itemB.order);
 		items = e.detail.items;
 	};
 
 	const handleFinalize = (e: CustomEvent<DndEvent<ListItem>>) => {
 		console.log('finalize');
-		e.detail.items.sort((itemA: ListItem, itemB: ListItem) => itemA.order - itemB.order);
+		e.detail.items.sort((itemA: any, itemB: any) => itemA.order - itemB.order);
 		items = e.detail.items;
 	};
 </script>
@@ -44,7 +46,7 @@
 	>
 		{#each items as item (item.id)}
 			<div
-				class="mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent mr-4 last:mb-0"
+				class="relative mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent mr-4 last:mb-0"
 				animate:flip={{ duration: flipDurationMs }}
 			>
 				<div class="group flex-1 flex text-sm text-[#DADDE3]">
@@ -58,7 +60,23 @@
 						><ChevronDown class="w-4 text-[#5C5F67]" /></Toggle
 					>
 				</div>
+				{#if item[SHADOW_ITEM_MARKER_PROPERTY_NAME]}
+					<div in:fade={{ duration: 200, easing: cubicIn }} class="custom-shadow-item" />
+				{/if}
 			</div>
 		{/each}
 	</section>
 </div>
+
+<style>
+	.custom-shadow-item {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		visibility: visible;
+		background-color: #1c233080;
+		background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23414650FF' stroke-width='2' stroke-dasharray='5%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+	}
+</style>

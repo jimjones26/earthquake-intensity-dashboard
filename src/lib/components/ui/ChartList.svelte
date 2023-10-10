@@ -26,7 +26,7 @@
 <div class="flex flex-1 mt-2 mb-5">
 	<section
 		class="flex-1 flex flex-col justify-center"
-		use:dndzone={{ items, flipDurationMs, type, dropFromOthersDisabled }}
+		use:dndzone={{ items, flipDurationMs, type, dropFromOthersDisabled, dropTargetStyle: {} }}
 		on:consider={handleConsider}
 		on:finalize={handleFinalize}
 	>

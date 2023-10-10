@@ -18,7 +18,10 @@
 
 	export let items: ListItem[] = [];
 	export let type: string;
+
 	const flipDurationMs = 200;
+	const maxItems = 3;
+	let dropFromOthersDisabled = false;
 
 	const handleConsider = (e: CustomEvent<DndEvent<ListItem>>) => {
 		console.log('consider');
@@ -30,13 +33,14 @@
 		console.log('finalize');
 		e.detail.items.sort((itemA: any, itemB: any) => itemA.order - itemB.order);
 		items = e.detail.items;
+		dropFromOthersDisabled = items.length >= maxItems;
 	};
 </script>
 
 <div class="flex flex-1 mt-2 mb-5">
 	<section
 		class="flex-1 flex flex-col justify-center"
-		use:dndzone={{ items, flipDurationMs, type }}
+		use:dndzone={{ items, flipDurationMs, type, dropFromOthersDisabled }}
 		on:consider={handleConsider}
 		on:finalize={handleFinalize}
 	>

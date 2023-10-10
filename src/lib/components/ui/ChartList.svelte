@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ListItem } from '$lib/ListItem';
-	import { dndzone, TRIGGERS, SOURCES, alertToScreenReader } from 'svelte-dnd-action';
+	import { dndzone } from 'svelte-dnd-action';
 
 	export let items: ListItem[] = [];
 	export let type: string;

@@ -3,11 +3,11 @@
 </script>
 
 <div
-	class="flex min-h-12 min-h-12 h-12 w-12 justify-center items-center mr-4 {intensity <= 2.9
+	class="flex w-14 justify-center items-center mr-4 {intensity <= 2.9
 		? 'green'
 		: intensity <= 5.9
 		? 'yellow'
-		: 'red'} group-hover:opacity-80"
+		: 'red'} group-hover:opacity-80 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500"
 >
 	{intensity}
 </div>

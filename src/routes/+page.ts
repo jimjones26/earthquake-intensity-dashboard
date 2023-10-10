@@ -10,7 +10,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'Syracuse, Connecticut',
 				coordinates: '-7.67733, 19.16687',
 				distanced: '14.94 mi',
-				depth: '1.94 mi'
+				depth: '1.94 mi',
+				order: 1,
 			},
 			{
 				id: 2,
@@ -19,7 +20,8 @@ export const load: PageLoad = ({ params }) => {
 				location: '34th St W, Bradenton, USA',
 				coordinates: '28.96065, -123.11716',
 				distanced: '147 mi',
-				depth: '62 mi'
+				depth: '62 mi',
+				order: 2,
 			},
 			{
 				id: 3,
@@ -28,7 +30,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.8 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 3,
 			},
 			{
 				id: 4,
@@ -37,7 +40,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'Johnston Lock, East Halton',
 				coordinates: '-7.67733, 19.16687',
 				distanced: '144 mi',
-				depth: '63 mi'
+				depth: '63 mi',
+				order: 4,
 			},
 			{
 				id: 5,
@@ -46,7 +50,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 5,
 			},
 			{
 				id: 6,
@@ -55,7 +60,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 6,
 			},
 			{
 				id: 7,
@@ -64,7 +70,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'T.M. Suite 123, Adellaton',
 				coordinates: '-19.50289, 175.41761',
 				distanced: '166 mi',
-				depth: '34 mi'
+				depth: '34 mi',
+				order: 7,
 			},
 			{
 				id: 8,
@@ -73,7 +80,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 8,
 			},
 			{
 				id: 9,
@@ -82,7 +90,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 9,
 			},
 			{
 				id: 10,
@@ -91,7 +100,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'Casper Locks, Bashirianland',
 				coordinates: '-7.67733, 19.16687',
 				distanced: '16.94 mi',
-				depth: '8.09 mi'
+				depth: '8.09 mi',
+				order: 10,
 			},
 			{
 				id: 11,
@@ -100,7 +110,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'Micaela Cliffs, Thielshire',
 				coordinates: '28.96065, -123.11716',
 				distanced: '17.27 mi',
-				depth: '1.62 mi'
+				depth: '1.62 mi',
+				order: 11,
 			},
 			{
 				id: 12,
@@ -109,7 +120,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'W. Harbors, New Lauretta',
 				coordinates: '-59.17503, 0.85927',
 				distanced: '12.33 mi',
-				depth: '2.93 mi'
+				depth: '2.93 mi',
+				order: 12,
 			},
 			{
 				id: 13,
@@ -118,7 +130,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'B. Crescent, New Llewelly',
 				coordinates: '28.96065, -123.11716',
 				distanced: '17.27 mi',
-				depth: '1.62 mi'
+				depth: '1.62 mi',
+				order: 13,
 			},
 			{
 				id: 14,
@@ -127,7 +140,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'Johnston Lock, East Halton',
 				coordinates: '-7.67733, 19.16687',
 				distanced: '15.30 mi',
-				depth: '9.31 mi'
+				depth: '9.31 mi',
+				order: 14,
 			},
 			{
 				id: 15,
@@ -136,7 +150,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 15,
 			},
 			{
 				id: 16,
@@ -145,7 +160,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'Syracuse, Connecticut',
 				coordinates: '-7.67733, 19.16687',
 				distanced: '14.94 mi',
-				depth: '1.94 mi'
+				depth: '1.94 mi',
+				order: 16,
 			},
 			{
 				id: 17,
@@ -154,7 +170,8 @@ export const load: PageLoad = ({ params }) => {
 				location: '34th St W, Bradenton, USA',
 				coordinates: '28.96065, -123.11716',
 				distanced: '147 mi',
-				depth: '62 mi'
+				depth: '62 mi',
+				order: 17,
 			},
 			{
 				id: 18,
@@ -163,7 +180,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.8 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 18,
 			},
 			{
 				id: 19,
@@ -172,7 +190,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'Johnston Lock, East Halton',
 				coordinates: '-7.67733, 19.16687',
 				distanced: '144 mi',
-				depth: '63 mi'
+				depth: '63 mi',
+				order: 19,
 			},
 			{
 				id: 20,
@@ -181,7 +200,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 20,
 			},
 			{
 				id: 21,
@@ -190,7 +210,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 21,
 			},
 			{
 				id: 22,
@@ -199,7 +220,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'T.M. Suite 123, Adellaton',
 				coordinates: '-19.50289, 175.41761',
 				distanced: '166 mi',
-				depth: '34 mi'
+				depth: '34 mi',
+				order: 22,
 			},
 			{
 				id: 23,
@@ -208,7 +230,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 23,
 			},
 			{
 				id: 24,
@@ -217,7 +240,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 24,
 			},
 			{
 				id: 25,
@@ -226,7 +250,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'Casper Locks, Bashirianland',
 				coordinates: '-7.67733, 19.16687',
 				distanced: '16.94 mi',
-				depth: '8.09 mi'
+				depth: '8.09 mi',
+				order: 25,
 			},
 			{
 				id: 26,
@@ -235,7 +260,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'Micaela Cliffs, Thielshire',
 				coordinates: '28.96065, -123.11716',
 				distanced: '17.27 mi',
-				depth: '1.62 mi'
+				depth: '1.62 mi',
+				order: 26,
 			},
 			{
 				id: 27,
@@ -244,7 +270,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'W. Harbors, New Lauretta',
 				coordinates: '-59.17503, 0.85927',
 				distanced: '12.33 mi',
-				depth: '2.93 mi'
+				depth: '2.93 mi',
+				order: 27,
 			},
 			{
 				id: 28,
@@ -253,7 +280,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'B. Crescent, New Llewelly',
 				coordinates: '28.96065, -123.11716',
 				distanced: '17.27 mi',
-				depth: '1.62 mi'
+				depth: '1.62 mi',
+				order: 28,
 			},
 			{
 				id: 29,
@@ -262,7 +290,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'Johnston Lock, East Halton',
 				coordinates: '-7.67733, 19.16687',
 				distanced: '15.30 mi',
-				depth: '9.31 mi'
+				depth: '9.31 mi',
+				order: 29,
 			},
 			{
 				id: 30,
@@ -271,7 +300,8 @@ export const load: PageLoad = ({ params }) => {
 				location: 'H.G. Suite 113, Wardville',
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
-				depth: '1.22 mi'
+				depth: '1.22 mi',
+				order: 30,
 			},
 		]
 	};

@@ -15,6 +15,7 @@
 		coordinates: string;
 		distanced: string;
 		depth: string;
+		order: number;
 	}
 
 	let items: ListItem[] = data.earthquakes;

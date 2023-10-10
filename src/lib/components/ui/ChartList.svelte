@@ -14,6 +14,7 @@
 		coordinates: string;
 		distanced: string;
 		depth: string;
+		order: number;
 	}
 
 	export let items: ListItem[] = [];
@@ -25,7 +26,7 @@
 
 	const handleConsider = (e: CustomEvent<DndEvent<ListItem>>) => {
 		console.log('consider');
-		e.detail.items.sort((itemA: any, itemB: any) => itemA.order - itemB.order);
+		e.detail.items.sort((itemA: ListItem, itemB: ListItem) => itemA.order - itemB.order);
 		items = e.detail.items;
 	};
 

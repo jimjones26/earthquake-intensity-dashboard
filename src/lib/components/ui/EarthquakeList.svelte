@@ -37,7 +37,7 @@
 		{#each items as item (item.id)}
 			<div class="mb-2 p-0 animate:flip={{ duration: flipDurationMs }}">
 				<div
-					class="relative bg-[#4B4F5C]/25 h-12 hover:bg-transparent mr-4 last:mb-0 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500 active:bg-[#0F141B] column"
+					class="relative flex bg-[#4B4F5C]/25 h-12 hover:bg-transparent mr-4 last:mb-0 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500 active:bg-[#0F141B] column"
 				>
 					<div class="group flex-1 flex text-sm text-[#DADDE3]">
 						<Intensity intensity={item.intensity} />
@@ -71,6 +71,6 @@
 		background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23414650FF' stroke-width='2' stroke-dasharray='5%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 	}
 	:global(#dnd-action-dragged-el .column) {
-		transform: rotate(7deg);
+		background-color: #0f141b;
 	}
 </style>

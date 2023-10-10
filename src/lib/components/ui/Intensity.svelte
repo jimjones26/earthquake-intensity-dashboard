@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="flex min-h-12 min-h-12 h-12 w-12 justify-center items-center mr-4 {intensity <= 2.9
+	class="flex min-w-12 w-12 justify-center items-center mr-4 {intensity <= 2.9
 		? 'green'
 		: intensity <= 5.9
 		? 'yellow'

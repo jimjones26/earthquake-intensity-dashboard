@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { ListItem } from '$lib/ListItem';
 	import { dndzone } from 'svelte-dnd-action';
+	import { compareStore } from '$lib/compare-store';
 
 	export let items: ListItem[] = [];
 	export let type: string;
@@ -20,6 +21,7 @@
 		e.detail.items.sort((itemA: any, itemB: any) => itemA.order - itemB.order);
 		items = e.detail.items;
 		dropFromOthersDisabled = items.length >= maxItems;
+		compareStore.hydrate(items);
 	};
 </script>
 

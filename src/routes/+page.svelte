@@ -5,11 +5,12 @@
 	import { Input } from '$lib/components/ui/input';
 	import EarthquakeList from '$lib/components/ui/EarthquakeList.svelte';
 	import ChartList from '$lib/components/ui/ChartList.svelte';
+	import { earthquakeStore } from '$lib/earthquake-store';
+	import { compareStore } from '$lib/compare-store';
 
 	export let data: PageData;
 
-	let items: ListItem[] = data.earthquakes;
-	let comparedItems: ListItem[] = [];
+	earthquakeStore.hydrate(data.earthquakes);
 </script>
 
 <div class="flex mt-4 ml-5 mr-5 flex-1 overflow-hidden">
@@ -21,13 +22,16 @@
 				<Separator class="flex-1 ml-2 bg-[#21272F]" decorative />
 			</div>
 			<!-- Lists of earthquakes-->
-			<EarthquakeList {items} type="yellow" />
-			<div class="mb-5 mr-4 hidden bg-slate-100">compare list</div>
+			<EarthquakeList items={$earthquakeStore.items} type="yellow" />
+			<!-- Compare List -->
+			{#if $compareStore.items[0]}
+				<div class="mb-5 mr-4 bg-slate-100">compare list</div>
+			{/if}
 		</div>
 		<Separator orientation="vertical" class="mr-5 bg-[#21272F]" decorative />
 	</div>
 	<div class="flex w-[596px] bg-[#303547]/20 border border-[#31373F] mb-5">
 		<!-- Chart List -->
-		<ChartList items={comparedItems} type="yellow" />
+		<ChartList items={$compareStore.items} type="yellow" />
 	</div>
 </div>

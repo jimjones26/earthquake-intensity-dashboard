@@ -8,6 +8,8 @@
 	import { dndzone, SHADOW_ITEM_MARKER_PROPERTY_NAME } from 'svelte-dnd-action';
 	import { fade } from 'svelte/transition';
 	import { cubicIn } from 'svelte/easing';
+	import { earthquakeStore } from '$lib/earthquake-store';
+	import { compareStore } from '$lib/compare-store';
 
 	export let items: any[] = [];
 	export let type: string;
@@ -23,6 +25,7 @@
 		console.log('finalize');
 		e.detail.items.sort((itemA: any, itemB: any) => itemA.order - itemB.order);
 		items = e.detail.items;
+		earthquakeStore.hydrate(items);
 	};
 </script>
 

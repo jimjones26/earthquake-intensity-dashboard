@@ -36,7 +36,7 @@
 	>
 		{#each items as item (item.id)}
 			<div
-				class="relative mb-2 p-0 bg-[#4B4F5C]/25 h-12 cursor-pointer hover:bg-transparent mr-4 last:mb-0"
+				class="relative mb-2 p-0 bg-[#4B4F5C]/25 h-12 hover:bg-transparent mr-4 last:mb-0 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500 active:bg-[#0F141B]"
 				animate:flip={{ duration: flipDurationMs }}
 			>
 				<div class="group flex-1 flex text-sm text-[#DADDE3]">
@@ -51,7 +51,7 @@
 					>
 				</div>
 				{#if item[SHADOW_ITEM_MARKER_PROPERTY_NAME]}
-					<div in:fade={{ duration: 200, easing: cubicIn }} class="custom-shadow-item" />
+					<div in:fade={{ duration: 500, easing: cubicIn }} class="custom-shadow-item" />
 				{/if}
 			</div>
 		{/each}

@@ -7,7 +7,7 @@
 		? 'green'
 		: intensity <= 5.9
 		? 'yellow'
-		: 'red'} group-hover:opacity-80"
+		: 'red'} group-hover:opacity-80 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500"
 >
 	{intensity}
 </div>

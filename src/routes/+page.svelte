@@ -7,8 +7,18 @@
 
 	export let data: PageData;
 
-	let items: any = data.earthquakes;
-	let comparedItems: any = [];
+	interface ListItem {
+		id: number;
+		intensity: number;
+		time: string;
+		location: string;
+		coordinates: string;
+		distanced: string;
+		depth: string;
+	}
+
+	let items: ListItem[] = data.earthquakes;
+	let comparedItems: ListItem[] = [];
 </script>
 
 <div class="flex mt-4 ml-5 mr-5 flex-1 overflow-hidden">
@@ -20,13 +30,13 @@
 				<Separator class="flex-1 ml-2 bg-[#21272F]" decorative />
 			</div>
 			<!-- Lists of earthquakes-->
-			<EarthquakeList {items} />
+			<EarthquakeList {items} type="yellow" />
 			<div class="mb-5 mr-4 hidden bg-slate-100">compare list</div>
 		</div>
 		<Separator orientation="vertical" class="mr-5 bg-[#21272F]" decorative />
 	</div>
-	<div class="w-[596px] bg-[#303547]/20 border border-[#31373F] mb-5">
+	<div class="flex w-[596px] bg-[#303547]/20 border border-[#31373F] mb-5">
 		<!-- Chart List -->
-		<ChartList items={comparedItems} />
+		<ChartList items={comparedItems} type="yellow" />
 	</div>
 </div>

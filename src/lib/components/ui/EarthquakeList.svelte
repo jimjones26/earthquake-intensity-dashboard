@@ -29,7 +29,7 @@
 	};
 </script>
 
-<div class="flex-1 overflow-scroll mt-2 mb-5">
+<div class="flex-1 overflow-scroll mt-2">
 	<section
 		class="flex flex-col"
 		use:dndzone={{ items, flipDurationMs, type }}

@@ -6,7 +6,6 @@
 	import ItemRowData from '$lib/components/ui/ItemRowData.svelte';
 
 	import { dndzone, SHADOW_ITEM_MARKER_PROPERTY_NAME } from 'svelte-dnd-action';
-	import { flip } from 'svelte/animate';
 	import { fade } from 'svelte/transition';
 	import { cubicIn } from 'svelte/easing';
 

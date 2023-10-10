@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { ListItem } from '$lib/ListItem';
 	import { Toggle } from '$lib/components/ui/toggle';
 	import { ChevronDown } from 'lucide-svelte';
 	import Intensity from '$lib/components/ui/Intensity.svelte';
@@ -8,17 +9,6 @@
 	import { flip } from 'svelte/animate';
 	import { fade } from 'svelte/transition';
 	import { cubicIn } from 'svelte/easing';
-
-	interface ListItem {
-		id: number;
-		intensity: number;
-		time: string;
-		location: string;
-		coordinates: string;
-		distanced: string;
-		depth: string;
-		order: number;
-	}
 
 	export let items: any[] = [];
 	export let type: string;

@@ -1,22 +1,12 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import type { ListItem } from '$lib/ListItem';
 	import { Separator } from '$lib/components/ui/separator';
 	import { Input } from '$lib/components/ui/input';
 	import EarthquakeList from '$lib/components/ui/EarthquakeList.svelte';
 	import ChartList from '$lib/components/ui/ChartList.svelte';
 
 	export let data: PageData;
-
-	interface ListItem {
-		id: number;
-		intensity: number;
-		time: string;
-		location: string;
-		coordinates: string;
-		distanced: string;
-		depth: string;
-		order: number;
-	}
 
 	let items: ListItem[] = data.earthquakes;
 	let comparedItems: ListItem[] = [];

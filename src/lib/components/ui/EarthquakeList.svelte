@@ -43,17 +43,6 @@
 					class="relative flex bg-[#4B4F5C]/25 h-12 hover:bg-transparent mr-4 last:mb-0 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500 active:bg-[#0F141B] item"
 				>
 					<EarthquakeItem {item} canDelete={false} />
-					<!-- <div class="group flex-1 flex text-sm text-[#DADDE3]">
-						<Intensity intensity={item.intensity} />
-						<ItemRowData label="Time" value={item.time} columnWidthPercent="20" />
-						<ItemRowData label="Location" value={item.location} columnWidthPercent="30" />
-						<ItemRowData label="Coordinates" value={item.coordinates} columnWidthPercent="30" />
-						<ItemRowData label="Distanced" value={item.distanced} columnWidthPercent="10" />
-						<ItemRowData label="Depth" value={item.depth} columnWidthPercent="10" />
-						<Toggle class="h-12 w-12 rounded-none hover:bg-transparent"
-							><ChevronDown class="w-4 text-[#5C5F67]" /></Toggle
-						>
-					</div> -->
 					{#if item[SHADOW_ITEM_MARKER_PROPERTY_NAME]}
 						<div in:fade={{ duration: 500, easing: cubicIn }} class="custom-shadow-item" />
 					{/if}

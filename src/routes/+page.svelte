@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import type { ListItem } from '$lib/ListItem';
 	import { Separator } from '$lib/components/ui/separator';
 	import { Input } from '$lib/components/ui/input';
 	import EarthquakeList from '$lib/components/ui/EarthquakeList.svelte';
@@ -11,6 +10,8 @@
 	import { cubicIn } from 'svelte/easing';
 	import ListLabel from '$lib/components/ui/ListLabel.svelte';
 	import EarthquakeItem from '$lib/components/ui/EarthquakeItem.svelte';
+	import { Trash2Icon } from 'lucide-svelte';
+	import Button from '$lib/components/ui/button/button.svelte';
 
 	export let data: PageData;
 
@@ -26,10 +27,21 @@
 			<EarthquakeList items={$earthquakeStore.items} type="yellow" />
 			<!-- Compare List -->
 			{#if $compareStore.items[0]}
-				<div in:fade={{ duration: 500, easing: cubicIn }} class="mb-5 mr-4">
+				<div in:fade={{ duration: 500, easing: cubicIn }} class="mb-5">
 					<ListLabel label="Compare:" />
 					{#each $compareStore.items as item}
-						<EarthquakeItem {item} canDelete={true} />
+						<div class="flex mb-2 -mr-3 mt-2 items-center">
+							<div class="flex-1 flex bg-[#4B4F5C]/25 h-12">
+								<EarthquakeItem {item} />
+							</div>
+							<div>
+								<Button
+									variant="ghost"
+									class="justify-center p-2 ml-1 hover:bg-transparent text-[#4B4F55]"
+									><Trash2Icon class="w-4 h-4 m-0" /></Button
+								>
+							</div>
+						</div>
 					{/each}
 				</div>
 			{/if}

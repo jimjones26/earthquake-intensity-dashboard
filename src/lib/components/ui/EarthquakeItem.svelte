@@ -5,7 +5,7 @@
 	import { Toggle } from './toggle';
 
 	export let item: any;
-	export let canDelete: boolean;
+	//export let canDelete: boolean;
 </script>
 
 <div class="group flex-1 flex text-sm text-[#DADDE3]">
@@ -18,7 +18,4 @@
 	<Toggle class="h-12 w-12 rounded-none hover:bg-transparent"
 		><ChevronDown class="w-4 text-[#5C5F67]" /></Toggle
 	>
-	{#if canDelete}
-		TRASH
-	{/if}
 </div>

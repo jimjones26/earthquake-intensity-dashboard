@@ -40,9 +40,9 @@
 		{#each items as item (item.id)}
 			<div class="mb-2 p-0 animate:flip={{ duration: flipDurationMs }}">
 				<div
-					class="relative flex bg-[#4B4F5C]/25 h-12 hover:bg-transparent mr-4 last:mb-0 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500 active:bg-[#0F141B] item"
+					class="relative flex bg-[#4B4F5C]/25 h-12 hover:bg-transparent mr-6 last:mb-0 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500 active:bg-[#0F141B] item"
 				>
-					<EarthquakeItem {item} canDelete={false} />
+					<EarthquakeItem {item} />
 					{#if item[SHADOW_ITEM_MARKER_PROPERTY_NAME]}
 						<div in:fade={{ duration: 500, easing: cubicIn }} class="custom-shadow-item" />
 					{/if}

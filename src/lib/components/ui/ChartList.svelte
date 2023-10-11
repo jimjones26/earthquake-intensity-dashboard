@@ -2,6 +2,7 @@
 	import type { ListItem } from '$lib/ListItem';
 	import { dndzone } from 'svelte-dnd-action';
 	import { compareStore } from '$lib/compare-store';
+	import { LayerCake } from 'layercake';
 
 	export let items: ListItem[] = [];
 	export let type: string;
@@ -29,17 +30,32 @@
 		}
 		compareStore.hydrate(items);
 	};
+
+	const points = [
+		{ x: 0, y: 0 },
+		{ x: 5, y: 10 },
+		{ x: 10, y: 20 },
+		{ x: 15, y: 30 },
+		{ x: 20, y: 40 }
+	];
 </script>
 
-<div class="flex flex-1 mt-2 mb-5">
-	<section
-		class="flex-1 flex flex-col justify-center"
+<section class="relative w-full h-full grid">
+	<!-- div that sits underneath. this should be layercake?-->
+	<div class="w-full h-full">
+		<LayerCake data={points} x="x" y="y" />
+	</div>
+	<!-- div to sti on top of layercake for drag and drop zone -->
+	<div
+		class="absolute w-full h-full flex flex-col items-center justify-center"
 		use:dndzone={{ items, flipDurationMs, type, dropFromOthersDisabled, dropTargetStyle: {} }}
 		on:consider={handleConsider}
 		on:finalize={handleFinalize}
 	>
 		{#each items as item (item.id)}
-			<div><div class="hidden">{item.id}</div></div>
+			<div class="grid items-center justify-center">
+				<div class="hidden">{item.id}</div>
+			</div>
 		{/each}
-	</section>
-</div>
+	</div>
+</section>

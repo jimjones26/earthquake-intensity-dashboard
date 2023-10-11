@@ -27,6 +27,9 @@
 			{#if $compareStore.items[0]}
 				<div in:fade={{ duration: 500, easing: cubicIn }} class="mb-5 mr-4">
 					<ListLabel label="Compare:" />
+					{#each $compareStore.items as item}
+						{item.time}
+					{/each}
 				</div>
 			{/if}
 		</div>

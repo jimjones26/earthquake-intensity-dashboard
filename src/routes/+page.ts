@@ -11,7 +11,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-7.67733, 19.16687',
 				distanced: '14.94 mi',
 				depth: '1.94 mi',
-				order: 1,
+				order: 0,
 			},
 			{
 				id: 2,
@@ -21,7 +21,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '147 mi',
 				depth: '62 mi',
-				order: 2,
+				order: 1,
 			},
 			{
 				id: 3,
@@ -31,7 +31,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.8 mi',
 				depth: '1.22 mi',
-				order: 3,
+				order: 2,
 			},
 			{
 				id: 4,
@@ -41,7 +41,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-7.67733, 19.16687',
 				distanced: '144 mi',
 				depth: '63 mi',
-				order: 4,
+				order: 3,
 			},
 			{
 				id: 5,
@@ -51,7 +51,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
 				depth: '1.22 mi',
-				order: 5,
+				order: 4,
 			},
 			{
 				id: 6,
@@ -61,7 +61,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
 				depth: '1.22 mi',
-				order: 6,
+				order: 5,
 			},
 			{
 				id: 7,
@@ -71,7 +71,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-19.50289, 175.41761',
 				distanced: '166 mi',
 				depth: '34 mi',
-				order: 7,
+				order: 6,
 			},
 			{
 				id: 8,
@@ -81,7 +81,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
 				depth: '1.22 mi',
-				order: 8,
+				order: 7,
 			},
 			{
 				id: 9,
@@ -91,7 +91,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
 				depth: '1.22 mi',
-				order: 9,
+				order: 8,
 			},
 			{
 				id: 10,
@@ -101,7 +101,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-7.67733, 19.16687',
 				distanced: '16.94 mi',
 				depth: '8.09 mi',
-				order: 10,
+				order: 9,
 			},
 			{
 				id: 11,
@@ -111,7 +111,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '17.27 mi',
 				depth: '1.62 mi',
-				order: 11,
+				order: 10,
 			},
 			{
 				id: 12,
@@ -121,7 +121,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-59.17503, 0.85927',
 				distanced: '12.33 mi',
 				depth: '2.93 mi',
-				order: 12,
+				order: 11,
 			},
 			{
 				id: 13,
@@ -131,7 +131,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '17.27 mi',
 				depth: '1.62 mi',
-				order: 13,
+				order: 12,
 			},
 			{
 				id: 14,
@@ -141,7 +141,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-7.67733, 19.16687',
 				distanced: '15.30 mi',
 				depth: '9.31 mi',
-				order: 14,
+				order: 13,
 			},
 			{
 				id: 15,
@@ -151,7 +151,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
 				depth: '1.22 mi',
-				order: 15,
+				order: 14,
 			},
 			{
 				id: 16,
@@ -161,7 +161,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-7.67733, 19.16687',
 				distanced: '14.94 mi',
 				depth: '1.94 mi',
-				order: 16,
+				order: 15,
 			},
 			{
 				id: 17,
@@ -171,7 +171,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '147 mi',
 				depth: '62 mi',
-				order: 17,
+				order: 16,
 			},
 			{
 				id: 18,
@@ -181,7 +181,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.8 mi',
 				depth: '1.22 mi',
-				order: 18,
+				order: 17,
 			},
 			{
 				id: 19,
@@ -191,7 +191,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-7.67733, 19.16687',
 				distanced: '144 mi',
 				depth: '63 mi',
-				order: 19,
+				order: 18,
 			},
 			{
 				id: 20,
@@ -201,7 +201,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
 				depth: '1.22 mi',
-				order: 20,
+				order: 19,
 			},
 			{
 				id: 21,
@@ -211,7 +211,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
 				depth: '1.22 mi',
-				order: 21,
+				order: 20,
 			},
 			{
 				id: 22,
@@ -221,7 +221,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-19.50289, 175.41761',
 				distanced: '166 mi',
 				depth: '34 mi',
-				order: 22,
+				order: 21,
 			},
 			{
 				id: 23,
@@ -231,7 +231,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
 				depth: '1.22 mi',
-				order: 23,
+				order: 22,
 			},
 			{
 				id: 24,
@@ -241,7 +241,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
 				depth: '1.22 mi',
-				order: 24,
+				order: 23,
 			},
 			{
 				id: 25,
@@ -251,7 +251,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-7.67733, 19.16687',
 				distanced: '16.94 mi',
 				depth: '8.09 mi',
-				order: 25,
+				order: 24,
 			},
 			{
 				id: 26,
@@ -261,7 +261,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '17.27 mi',
 				depth: '1.62 mi',
-				order: 26,
+				order: 25,
 			},
 			{
 				id: 27,
@@ -271,7 +271,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-59.17503, 0.85927',
 				distanced: '12.33 mi',
 				depth: '2.93 mi',
-				order: 27,
+				order: 26,
 			},
 			{
 				id: 28,
@@ -281,7 +281,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '17.27 mi',
 				depth: '1.62 mi',
-				order: 28,
+				order: 27,
 			},
 			{
 				id: 29,
@@ -291,7 +291,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '-7.67733, 19.16687',
 				distanced: '15.30 mi',
 				depth: '9.31 mi',
-				order: 29,
+				order: 28,
 			},
 			{
 				id: 30,
@@ -301,7 +301,7 @@ export const load: PageLoad = ({ params }) => {
 				coordinates: '28.96065, -123.11716',
 				distanced: '12.18 mi',
 				depth: '1.22 mi',
-				order: 30,
+				order: 29,
 			},
 		]
 	};

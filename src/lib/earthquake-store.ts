@@ -9,8 +9,13 @@ const _earthquakeStore = () => {
     subscribe,
     hydrate: (items: any) => set({ items: items }),
     addItem: (item: any) => update((currentState) => {
-      console.log("FROM EARTHQUAKE STORE: ", item);
-      currentState.items.splice(item.id - 1, 0, item)
+      const spliceAt = currentState.items.find(el => el.order === item.order - 1)
+      const spliceIndex = currentState.items.indexOf(spliceAt);
+      if (spliceIndex === -1) {
+        currentState.items.splice(0, 0, item)
+      } else {
+        currentState.items.splice(spliceIndex + 1, 0, item)
+      }
       return { ...currentState }
     })
   }

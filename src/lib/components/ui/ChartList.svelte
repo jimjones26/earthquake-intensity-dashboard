@@ -2,7 +2,10 @@
 	import type { ListItem } from '$lib/ListItem';
 	import { dndzone } from 'svelte-dnd-action';
 	import { compareStore } from '$lib/compare-store';
-	import { LayerCake } from 'layercake';
+	import { LayerCake, Svg } from 'layercake';
+	import AxisX from './charts/AxisX.svelte';
+	import AxisY from './charts/AxisY.svelte';
+	import Line from './charts/Line.svelte';
 
 	export let items: ListItem[] = [];
 	export let type: string;
@@ -43,7 +46,13 @@
 <section class="relative w-full h-full grid">
 	<!-- div that sits underneath. this should be layercake?-->
 	<div class="w-full h-full">
-		<LayerCake data={points} x="x" y="y" />
+		<LayerCake data={points} x="x" y="y">
+			<Svg>
+				<AxisX />
+				<AxisY />
+				<Line />
+			</Svg></LayerCake
+		>
 	</div>
 	<!-- div to sti on top of layercake for drag and drop zone -->
 	<div

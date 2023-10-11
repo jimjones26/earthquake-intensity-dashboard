@@ -4,6 +4,7 @@
 	import { ChevronDown } from 'lucide-svelte';
 	import Intensity from '$lib/components/ui/Intensity.svelte';
 	import ItemRowData from '$lib/components/ui/ItemRowData.svelte';
+	import EarthquakeItem from '$lib/components/ui/EarthquakeItem.svelte';
 
 	import { dndzone, SHADOW_ITEM_MARKER_PROPERTY_NAME } from 'svelte-dnd-action';
 	import { fade } from 'svelte/transition';
@@ -41,7 +42,8 @@
 				<div
 					class="relative flex bg-[#4B4F5C]/25 h-12 hover:bg-transparent mr-4 last:mb-0 transition ease-in-out duration-500 hover:transition hover:ease-in-out hover:duration-500 active:bg-[#0F141B] item"
 				>
-					<div class="group flex-1 flex text-sm text-[#DADDE3]">
+					<EarthquakeItem {item} canDelete={false} />
+					<!-- <div class="group flex-1 flex text-sm text-[#DADDE3]">
 						<Intensity intensity={item.intensity} />
 						<ItemRowData label="Time" value={item.time} columnWidthPercent="20" />
 						<ItemRowData label="Location" value={item.location} columnWidthPercent="30" />
@@ -51,7 +53,7 @@
 						<Toggle class="h-12 w-12 rounded-none hover:bg-transparent"
 							><ChevronDown class="w-4 text-[#5C5F67]" /></Toggle
 						>
-					</div>
+					</div> -->
 					{#if item[SHADOW_ITEM_MARKER_PROPERTY_NAME]}
 						<div in:fade={{ duration: 500, easing: cubicIn }} class="custom-shadow-item" />
 					{/if}

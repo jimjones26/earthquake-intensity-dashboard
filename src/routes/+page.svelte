@@ -10,6 +10,7 @@
 	import { fade } from 'svelte/transition';
 	import { cubicIn } from 'svelte/easing';
 	import ListLabel from '$lib/components/ui/ListLabel.svelte';
+	import EarthquakeItem from '$lib/components/ui/EarthquakeItem.svelte';
 
 	export let data: PageData;
 
@@ -28,7 +29,7 @@
 				<div in:fade={{ duration: 500, easing: cubicIn }} class="mb-5 mr-4">
 					<ListLabel label="Compare:" />
 					{#each $compareStore.items as item}
-						{item.time}
+						<EarthquakeItem {item} canDelete={true} />
 					{/each}
 				</div>
 			{/if}

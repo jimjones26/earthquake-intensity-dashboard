@@ -8,6 +8,11 @@ const _earthquakeStore = () => {
   return {
     subscribe,
     hydrate: (items: any) => set({ items: items }),
+    addItem: (item: any) => update((currentState) => {
+      console.log("FROM EARTHQUAKE STORE: ", item);
+      currentState.items.splice(item.id - 1, 0, item)
+      return { ...currentState }
+    })
   }
 }
 

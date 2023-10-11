@@ -6,8 +6,7 @@
 	import ChartList from '$lib/components/ui/ChartList.svelte';
 	import { earthquakeStore } from '$lib/earthquake-store';
 	import { compareStore } from '$lib/compare-store';
-	import { fade } from 'svelte/transition';
-	import { cubicIn } from 'svelte/easing';
+	import { slide } from 'svelte/transition';
 	import ListLabel from '$lib/components/ui/ListLabel.svelte';
 	import EarthquakeItem from '$lib/components/ui/EarthquakeItem.svelte';
 	import { Trash2Icon } from 'lucide-svelte';
@@ -27,10 +26,10 @@
 			<EarthquakeList items={$earthquakeStore.items} type="yellow" />
 			<!-- Compare List -->
 			{#if $compareStore.items[0]}
-				<div in:fade={{ duration: 500, easing: cubicIn }} class="mb-5">
+				<div transition:slide class="mb-5">
 					<ListLabel label="Compare:" />
 					{#each $compareStore.items as item}
-						<div class="flex mb-2 -mr-3 mt-2 items-center last:mb-0">
+						<div class="flex mb-2 -mr-3 mt-2 items-center last:mb-0" transition:slide>
 							<div class="flex-1 flex bg-[#4B4F5C]/25 h-12">
 								<EarthquakeItem {item} />
 							</div>

@@ -1,13 +1,14 @@
 <script lang="ts">
 	import type { ListItem } from '$lib/ListItem';
 	import { dndzone } from 'svelte-dnd-action';
+	import { compareStore } from '$lib/compare-store';
 
 	export let items: ListItem[] = [];
 	export let type: string;
 
 	const flipDurationMs = 200;
 	const maxItems = 3;
-	let dropFromOthersDisabled = false;
+	$: dropFromOthersDisabled = $compareStore.dropFromOtherDisabled;
 
 	const handleConsider = (e: CustomEvent<DndEvent<ListItem>>) => {
 		console.log('consider');
@@ -19,7 +20,14 @@
 		console.log('finalize');
 		e.detail.items.sort((itemA: any, itemB: any) => itemA.order - itemB.order);
 		items = e.detail.items;
-		dropFromOthersDisabled = items.length >= maxItems;
+		if (items.length >= maxItems) {
+			// update store to true
+			compareStore.updateDropDisabled(true);
+		} else {
+			//update store to false
+			compareStore.updateDropDisabled(false);
+		}
+		compareStore.hydrate(items);
 	};
 </script>
 

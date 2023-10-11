@@ -29,7 +29,7 @@
 				<div transition:slide class="mb-5">
 					<ListLabel label="Compare:" />
 					{#each $compareStore.items as item}
-						<div class="flex mb-2 -mr-3 mt-2 items-center last:mb-0" transition:slide>
+						<div class="flex -mr-3 mt-2 items-center last:mb-0" transition:slide>
 							<div class="flex-1 flex bg-[#4B4F5C]/25 h-12">
 								<EarthquakeItem {item} />
 							</div>

@@ -36,7 +36,7 @@
 							<div>
 								<Button
 									variant="ghost"
-									class="justify-center p-2 ml-1 hover:bg-transparent text-[#4B4F55]"
+									class="justify-center p-2 ml-1 hover:bg-transparent text-[#4B4F55] hover:text-[#DADDE3]"
 									><Trash2Icon class="w-4 h-4 m-0" /></Button
 								>
 							</div>

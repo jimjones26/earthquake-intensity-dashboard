@@ -44,16 +44,6 @@
 </script>
 
 <section class="relative w-full h-full grid">
-	<!-- div that sits underneath. this should be layercake?-->
-	<div class="w-full h-full">
-		<LayerCake data={points} x="x" y="y">
-			<Svg>
-				<AxisX />
-				<AxisY />
-				<Line />
-			</Svg></LayerCake
-		>
-	</div>
 	<!-- div to sti on top of layercake for drag and drop zone -->
 	<div
 		class="absolute w-full h-full flex flex-col items-center justify-center"
@@ -66,5 +56,16 @@
 				<div class="hidden">{item.id}</div>
 			</div>
 		{/each}
+	</div>
+
+	<!-- div that sits underneath. this should be layercake?-->
+	<div class="w-full h-full z-0 hover:bg-red-600/25">
+		<LayerCake data={points} x="x" y="y">
+			<Svg>
+				<AxisX />
+				<AxisY />
+				<Line />
+			</Svg></LayerCake
+		>
 	</div>
 </section>

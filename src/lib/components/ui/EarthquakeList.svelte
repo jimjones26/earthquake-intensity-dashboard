@@ -1,16 +1,10 @@
 <script lang="ts">
 	import type { ListItem } from '$lib/ListItem';
-	import { Toggle } from '$lib/components/ui/toggle';
-	import { ChevronDown } from 'lucide-svelte';
-	import Intensity from '$lib/components/ui/Intensity.svelte';
-	import ItemRowData from '$lib/components/ui/ItemRowData.svelte';
 	import EarthquakeItem from '$lib/components/ui/EarthquakeItem.svelte';
-
 	import { dndzone, SHADOW_ITEM_MARKER_PROPERTY_NAME } from 'svelte-dnd-action';
 	import { fade } from 'svelte/transition';
 	import { cubicIn } from 'svelte/easing';
 	import { earthquakeStore } from '$lib/earthquake-store';
-	import { compareStore } from '$lib/compare-store';
 
 	export let items: any[] = [];
 	export let type: string;

@@ -1,5 +1,7 @@
-<script>
+<script lang="ts">
 	import '../app.postcss';
+	import type { LayoutData } from './$types';
+
 	import { Button } from '$lib/components/ui/button';
 	import { Toggle } from '$lib/components/ui/toggle';
 	import { Separator } from '$lib/components/ui/separator';
@@ -10,6 +12,10 @@
 	import { Columns } from 'lucide-svelte';
 	import { LayoutDashboard } from 'lucide-svelte';
 	import { Box } from 'lucide-svelte';
+
+	export let data: LayoutData;
+
+	console.log('+layout.svelte: ', data.rawEarthquakeData);
 </script>
 
 <div class="relative w-full h-full overflow-hidden">

@@ -2,6 +2,7 @@
 	import '../app.postcss';
 	import type { LayoutData } from './$types';
 
+	import DataSummary from '$lib/components/ui/DataSummary.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { Toggle } from '$lib/components/ui/toggle';
 	import { Separator } from '$lib/components/ui/separator';
@@ -16,6 +17,25 @@
 	export let data: LayoutData;
 
 	console.log('+layout.svelte: ', data.rawEarthquakeData);
+
+	$: dataSummary = [
+		{
+			label: 'Number of Earthquakes',
+			value: 12
+		},
+		{
+			label: 'Average Frequency',
+			value: 4
+		},
+		{
+			label: 'Maximum Magnitude',
+			value: 6.0
+		},
+		{
+			label: 'Minimum Magnitude',
+			value: 6
+		}
+	];
 </script>
 
 <div class="relative w-full h-full overflow-hidden">
@@ -50,31 +70,7 @@
 					<Toggle size="sm" pressed><Columns class="w-[18px] h-[14px] mr-1" />Comparison</Toggle>
 				</div>
 			</div>
-
-			<!-- REPLACE WITH COMPONENT -->
-			<div class="flex">
-				<div class="flex items-center">
-					<p class="font-bold text-lg text-[#E9DF9D] px-4">12</p>
-					<p class="text-sm font-bold leading-4">Number of<br /> Earthquakes</p>
-					<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
-				</div>
-				<div class="flex items-center">
-					<p class="font-bold text-lg text-[#E9DF9D] px-4">4</p>
-					<p class="text-sm font-bold leading-4">Average<br /> Frequency</p>
-					<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
-				</div>
-				<div class="flex items-center">
-					<p class="font-bold text-lg text-[#E9DF9D] px-4">6.0</p>
-					<p class="text-sm font-bold leading-4">Maximum<br /> Magnitude</p>
-					<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
-				</div>
-				<div class="flex items-center mr-4">
-					<p class="font-bold text-lg text-[#E9DF9D] px-4">2.0</p>
-					<p class="text-sm font-bold leading-4">Minimum<br /> Magnitude</p>
-				</div>
-			</div>
-
-			<!-- END REPLACE WITH COMPONENT -->
+			<DataSummary summaryData={dataSummary} />
 		</header>
 		<Separator class="bg-[#20252C]" />
 		<!-- slot -->

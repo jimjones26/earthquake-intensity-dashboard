@@ -50,6 +50,8 @@
 					<Toggle size="sm" pressed><Columns class="w-[18px] h-[14px] mr-1" />Comparison</Toggle>
 				</div>
 			</div>
+
+			<!-- REPLACE WITH COMPONENT -->
 			<div class="flex">
 				<div class="flex items-center">
 					<p class="font-bold text-lg text-[#E9DF9D] px-4">12</p>
@@ -71,6 +73,8 @@
 					<p class="text-sm font-bold leading-4">Minimum<br /> Magnitude</p>
 				</div>
 			</div>
+
+			<!-- END REPLACE WITH COMPONENT -->
 		</header>
 		<Separator class="bg-[#20252C]" />
 		<!-- slot -->

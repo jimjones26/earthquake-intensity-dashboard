@@ -13,15 +13,26 @@
 	import { Columns } from 'lucide-svelte';
 	import { LayoutDashboard } from 'lucide-svelte';
 	import { Box } from 'lucide-svelte';
+	import { earthquakesDataStore } from '$lib/stores/earthquake-data';
+	import { getContext, setContext } from 'svelte';
 
 	export let data: LayoutData;
 
-	console.log('+layout.svelte: ', data.rawEarthquakeData);
+	console.log(data);
+
+	$: earthquakesDataStore.set({
+		lastUpdated: data.rawEarthquakeData.metadata.generated,
+		count: data.rawEarthquakeData.metadata.count,
+		earthquakes: data.rawEarthquakeData.features
+	});
+
+	setContext('earthquakeStoreData', earthquakesDataStore);
+	getContext('earthquakeStoreData');
 
 	$: dataSummary = [
 		{
 			label: 'Number of Earthquakes',
-			value: 12
+			value: $earthquakesDataStore.count
 		},
 		{
 			label: 'Average Frequency',

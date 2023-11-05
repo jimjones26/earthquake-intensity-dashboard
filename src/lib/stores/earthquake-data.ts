@@ -2,7 +2,9 @@ import { writable } from "svelte/store";
 
 const _earthquakesDataStore = () => {
   const { set, subscribe } = writable({
-    migrants: []
+    lastUpdated: null,
+    count: 0,
+    earthquakes: []
   })
 
   return {

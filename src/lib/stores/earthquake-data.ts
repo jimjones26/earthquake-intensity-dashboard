@@ -4,7 +4,7 @@ const _earthquakesDataStore = () => {
   const { set, subscribe } = writable({
     lastUpdated: null,
     count: 0,
-    earthquakes: []
+    earthquakes: null
   })
 
   return {

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.postcss';
 	import type { LayoutData } from './$types';
+	import * as d3 from 'd3';
 
 	import DataSummary from '$lib/components/ui/DataSummary.svelte';
 	import { Button } from '$lib/components/ui/button';
@@ -18,13 +19,13 @@
 
 	export let data: LayoutData;
 
-	console.log(data);
-
 	$: earthquakesDataStore.set({
 		lastUpdated: data.rawEarthquakeData.metadata.generated,
 		count: data.rawEarthquakeData.metadata.count,
 		earthquakes: data.rawEarthquakeData.features
 	});
+
+	console.log(data.rawEarthquakeData.features);
 
 	setContext('earthquakeStoreData', earthquakesDataStore);
 	getContext('earthquakeStoreData');
@@ -40,11 +41,11 @@
 		},
 		{
 			label: 'Maximum Magnitude',
-			value: 6.0
+			value: d3.max($earthquakesDataStore.earthquakes.map((d: any) => d.properties.mag))
 		},
 		{
 			label: 'Minimum Magnitude',
-			value: 6
+			value: d3.min($earthquakesDataStore.earthquakes.map((d: any) => d.properties.mag))
 		}
 	];
 </script>

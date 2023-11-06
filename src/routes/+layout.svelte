@@ -1,7 +1,9 @@
 <script lang="ts">
 	import '../app.postcss';
 	import type { LayoutData } from './$types';
+	import * as d3 from 'd3';
 
+	import DataSummary from '$lib/components/ui/DataSummary.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { Toggle } from '$lib/components/ui/toggle';
 	import { Separator } from '$lib/components/ui/separator';
@@ -12,10 +14,40 @@
 	import { Columns } from 'lucide-svelte';
 	import { LayoutDashboard } from 'lucide-svelte';
 	import { Box } from 'lucide-svelte';
+	import { earthquakesDataStore } from '$lib/stores/earthquake-data';
+	import { getContext, setContext } from 'svelte';
 
 	export let data: LayoutData;
 
-	console.log('+layout.svelte: ', data.rawEarthquakeData);
+	$: earthquakesDataStore.set({
+		lastUpdated: data.rawEarthquakeData.metadata.generated,
+		count: data.rawEarthquakeData.metadata.count,
+		earthquakes: data.rawEarthquakeData.features
+	});
+
+	console.log(data.rawEarthquakeData.features);
+
+	setContext('earthquakeStoreData', earthquakesDataStore);
+	getContext('earthquakeStoreData');
+
+	$: dataSummary = [
+		{
+			label: 'Number of Earthquakes',
+			value: $earthquakesDataStore.count
+		},
+		{
+			label: 'Average Frequency',
+			value: 4
+		},
+		{
+			label: 'Maximum Magnitude',
+			value: d3.max($earthquakesDataStore.earthquakes.map((d: any) => d.properties.mag))
+		},
+		{
+			label: 'Minimum Magnitude',
+			value: d3.min($earthquakesDataStore.earthquakes.map((d: any) => d.properties.mag))
+		}
+	];
 </script>
 
 <div class="relative w-full h-full overflow-hidden">
@@ -50,27 +82,7 @@
 					<Toggle size="sm" pressed><Columns class="w-[18px] h-[14px] mr-1" />Comparison</Toggle>
 				</div>
 			</div>
-			<div class="flex">
-				<div class="flex items-center">
-					<p class="font-bold text-lg text-[#E9DF9D] px-4">12</p>
-					<p class="text-sm font-bold leading-4">Number of<br /> Earthquakes</p>
-					<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
-				</div>
-				<div class="flex items-center">
-					<p class="font-bold text-lg text-[#E9DF9D] px-4">4</p>
-					<p class="text-sm font-bold leading-4">Average<br /> Frequency</p>
-					<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
-				</div>
-				<div class="flex items-center">
-					<p class="font-bold text-lg text-[#E9DF9D] px-4">6.0</p>
-					<p class="text-sm font-bold leading-4">Maximum<br /> Magnitude</p>
-					<Separator orientation="vertical" class="bg-[#1D2125] ml-4 h-[90%]" />
-				</div>
-				<div class="flex items-center mr-4">
-					<p class="font-bold text-lg text-[#E9DF9D] px-4">2.0</p>
-					<p class="text-sm font-bold leading-4">Minimum<br /> Magnitude</p>
-				</div>
-			</div>
+			<DataSummary summaryData={dataSummary} />
 		</header>
 		<Separator class="bg-[#20252C]" />
 		<!-- slot -->
